@@ -1,59 +1,69 @@
-# Enhanced Vite React TypeScript Template
+# 8-Mart Tabrigi
 
-This template includes built-in detection for missing CSS variables between your Tailwind config and CSS files.
+Xalqaro Ayollar Kuni uchun maxsus yaratilgan interaktiv tabrik sayti.
 
-## Features
+## Haqida
 
-- **CSS Variable Detection**: Automatically detects if CSS variables referenced in `tailwind.config.cjs` are defined in `src/index.css`
-- **Enhanced Linting**: Includes ESLint, Stylelint, and custom CSS variable validation
-- **Shadcn/ui**: Pre-configured with all Shadcn components
-- **Modern Stack**: Vite + React + TypeScript + Tailwind CSS
+Bu loyiha 8-Mart bayramini nishonlash uchun yaratilgan zamonaviy, interaktiv veb-ilovasi. Sayt foydalanuvchilarga shaxsiylashtirilgan tabriklar, iliq so'zlar va kutilmagan sovg'alar orqali bayram kayfiyatini his qilish imkoniyatini beradi.
 
-## Available Scripts
+## Xususiyatlar
+
+- **Shaxsiylashtirilgan Tabrik** - Ismingizni kiritib, o'zingiz uchun maxsus tabrik oling
+- **Iliq So'zlar Generatori** - Tasodifiy kompliment va iliq so'zlar olish
+- **Kutilmagan Sovg'a** - Interaktiv sovg'a qutisi konfetti effekti bilan
+- **Ayollarning Fazilatlar Tarmog'i** - Ayollarning eng muhim sifatlarini ko'rsatuvchi grid
+- **Musiqa Pleyer** - Fon musiqasi bilan kayfiyatni yaratish
+- **Gul Barglari Animatsiyasi** - Sahifada uchib yuradigan gul barglari
+- **To'liq Responsiv Dizayn** - Barcha ekran o'lchamlarida mukammal ko'rinish
+
+## Texnologiyalar
+
+- **React 18** - UI kutubxonasi
+- **TypeScript** - Type-safe development
+- **Vite** - Build tool va development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animatsiya kutubxonasi
+- **Lucide React** - Icon kutubxonasi
+- **Canvas Confetti** - Konfetti effektlari
+
+## O'rnatish
 
 ```bash
-# Run all linting (includes CSS variable check)
-npm run lint
+# Bog'liqliklarni o'rnatish
+npm install
 
-# Check only CSS variables
-npm run check:css-vars
+# Development serverni ishga tushirish
+npm run dev
 
-# Individual linting
-npm run lint:js    # ESLint
-npm run lint:css   # Stylelint
+# Production build yaratish
+npm run build
+
+# Production buildni preview qilish
+npm run preview
 ```
 
-## CSS Variable Detection
+## Loyiha Strukturasi
 
-The template includes a custom script that:
-
-1. **Parses `tailwind.config.cjs`** to find all `var(--variable)` references
-2. **Parses `src/index.css`** to find all defined CSS variables (`--variable:`)
-3. **Cross-references** them to find missing definitions
-4. **Reports undefined variables** with clear error messages
-
-### Example Output
-
-When CSS variables are missing:
 ```
-❌ Undefined CSS variables found in tailwind.config.cjs:
-   --sidebar-background
-   --sidebar-foreground
-   --sidebar-primary
-
-Add these variables to src/index.css
+src/
+├── components/
+│   ├── Hero.tsx                    # Asosiy hero section
+│   ├── PersonalizedGreeting.tsx    # Shaxsiylashtirilgan tabrik
+│   ├── ComplimentGenerator.tsx     # Kompliment generatori
+│   ├── GiftBox.tsx                 # Interaktiv sovg'a qutisi
+│   ├── QualitiesGrid.tsx          # Fazilatlar grid
+│   ├── FinalSection.tsx           # Footer section
+│   ├── MusicPlayer.tsx            # Musiqa pleyer
+│   └── FlowerPetals.tsx           # Gul barglari animatsiyasi
+├── App.tsx                         # Asosiy app komponenti
+├── main.tsx                        # Entry point
+└── index.css                       # Global styles
 ```
 
-When all variables are defined:
-```
-✅ All CSS variables in tailwind.config.cjs are defined
-```
+## Litsenziya
 
-## How It Works
+MIT
 
-The detection happens during the `npm run lint` command, which will:
-- Exit with error code 1 if undefined variables are found
-- Show exactly which variables need to be added to your CSS file
-- Integrate seamlessly with your development workflow
+## Muallif
 
-This prevents runtime CSS issues where Tailwind classes reference undefined CSS variables.
+8-Mart bayramingiz muborak bo'lsin!

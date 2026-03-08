@@ -55,16 +55,16 @@ const Hero: React.FC = () => {
             onClick={() => document.getElementById('greeting')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-10 py-5 bg-primary text-white rounded-full font-bold text-xl shadow-2xl shadow-primary/30 flex items-center gap-3 group relative overflow-hidden"
           >
-            <span className="relative z-10">Tabrikni ochish</span>
+            <span className="relative z-10">Ismingiz bilan tabrik</span>
             <Heart className="w-5 h-5 group-hover:scale-125 transition-transform relative z-10 fill-white/20" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.button>
-          
+
           <button
             onClick={() => document.getElementById('compliments')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-10 py-5 bg-white glass text-primary rounded-full font-bold text-xl hover:bg-primary/5 transition-all flex items-center gap-3 border border-primary/20 shadow-xl"
           >
-            Ismingiz bilan tabrik oling <Sparkles className="w-5 h-5" />
+            Iliq so'zlar olish <Sparkles className="w-5 h-5" />
           </button>
         </div>
       </motion.div>
